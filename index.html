@@ -18,12 +18,11 @@
       position: relative;
     }
     .avatar {
-      width: 108px; height: 108px; border-radius: 50%;
-      background: rgba(255,255,255,.18); border: 3px solid rgba(255,255,255,.35);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 46px; margin: 0 auto 18px;
-      backdrop-filter: blur(4px);
-    }
+  width: 108px; height: 108px; border-radius: 50%;
+  overflow: hidden; margin: 0 auto 18px;
+  border: 3px solid rgba(255,255,255,.35);
+}
+
     .hero h1 { font-size: 30px; letter-spacing: 2px; margin-bottom: 8px; }
     .hero p.sub { opacity: .9; font-size: 15px; }
 
@@ -78,7 +77,7 @@
 
   <div class="hero">
     <!-- 换头像：把下面一行换成并把照片放进同一文件夹、命名 avatar.jpg -->
-         <div class="avatar"><img src="avatar.jpg" style="width:100%;height:100%;object-fit:cover;"></div>
+         <div class="avatar"><img src="avatar.jpg" alt="头像" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
     <h1>林丹谊</h1>
     <p class="sub">大数据技术专业学生 · 数据分析方向</p>
   </div>
