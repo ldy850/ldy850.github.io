@@ -18,19 +18,22 @@
       position: relative;
     }
     .avatar {
-      width: 108px; height: 108px; border-radius: 50%;
-      overflow: hidden; margin: 0 auto 18px;
-      border: 3px solid rgba(255,255,255,.35);
-    }
+  width: 108px; height: 108px; border-radius: 50%;
+  overflow: hidden; margin: 0 auto 18px;
+  border: 3px solid rgba(255,255,255,.35);
+}
+
     .hero h1 { font-size: 30px; letter-spacing: 2px; margin-bottom: 8px; }
     .hero p.sub { opacity: .9; font-size: 15px; }
 
-    /* 内容容器：负 margin 让第一张卡片上移压在横幅上 */
-    .wrap { max-width: 720px; margin: -80px auto 50px; padding: 0 20px; }
+    /* 内容容器 */
+    .wrap { max-width: 720px; margin: -55px auto 50px; padding: 0 20px; }
     .card {
       background: #fff; border-radius: 16px; padding: 28px 30px;
-      margin-bottom: 22px; box-shadow: 0 6px 22px rgba(30, 78, 140, .14);
+      margin-bottom: 22px; box-shadow: 0 6px 22px rgba(30, 78, 140, .10);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(30, 78, 140, .16); }
 
     .card h2 {
       font-size: 18px; color: #1e4e8c; margin-bottom: 16px;
@@ -73,7 +76,8 @@
 <body>
 
   <div class="hero">
-    <div class="avatar"><img src="avatar.jpg" alt="头像" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+    <!-- 换头像：把下面一行换成并把照片放进同一文件夹、命名 avatar.jpg -->
+         <div class="avatar"><img src="avatar.jpg" alt="头像" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
     <h1>林丹谊</h1>
     <p class="sub">大数据技术专业学生 · 数据分析方向</p>
   </div>
