@@ -6,75 +6,167 @@
   <title>林丹谊的个人主页</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f6f7; color: #333; line-height: 1.8; }
-    .wrap { max-width: 680px; margin: 50px auto; padding: 0 20px; }
-    header { text-align: center; margin-bottom: 36px; }
-    header h1 { font-size: 28px; margin-bottom: 6px; }
-    header p { color: #888; font-size: 15px; }
-    section { background: #fff; border-radius: 12px; padding: 24px 26px; margin-bottom: 18px; }
-    h2 { font-size: 17px; color: #2c5364; margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #2c5364; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; font-size: 15px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag { background: #eef3f7; color: #2c5364; padding: 5px 13px; border-radius: 18px; font-size: 14px; }
-    .muted { color: #888; font-size: 14px; }
-    a { color: #2c5364; text-decoration: none; }
-    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 30px; }
+    body {
+      font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #eef2f7; color: #2d3742; line-height: 1.8;
+    }
+
+    /* 顶部横幅 */
+    .hero {
+      background: linear-gradient(135deg, #3a7bd5 0%, #2b6cb0 45%, #1e4e8c 100%);
+      color: #fff; text-align: center; padding: 70px 20px 95px;
+      position: relative;
+    }
+    .avatar {
+      width: 108px; height: 108px; border-radius: 50%;
+      background: rgba(255,255,255,.18); border: 3px solid rgba(255,255,255,.35);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 46px; margin: 0 auto 18px;
+      backdrop-filter: blur(4px);
+    }
+    .hero h1 { font-size: 30px; letter-spacing: 2px; margin-bottom: 8px; }
+    .hero p.sub { opacity: .9; font-size: 15px; }
+
+    /* 内容容器 */
+    .wrap { max-width: 720px; margin: -55px auto 50px; padding: 0 20px; }
+    .card {
+      background: #fff; border-radius: 16px; padding: 28px 30px;
+      margin-bottom: 22px; box-shadow: 0 6px 22px rgba(30, 78, 140, .10);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(30, 78, 140, .16); }
+
+    .card h2 {
+      font-size: 18px; color: #1e4e8c; margin-bottom: 16px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .card h2::before {
+      content: ""; width: 6px; height: 18px; border-radius: 3px;
+      background: linear-gradient(#3a7bd5, #1e4e8c);
+    }
+
+    /* 经历条目 */
+    .item { margin-bottom: 16px; }
+    .item:last-child { margin-bottom: 0; }
+    .item .top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px; }
+    .item h3 { font-size: 15.5px; color: #2d3742; }
+    .item .time { font-size: 13px; color: #9aa7b4; }
+    .item p { font-size: 14px; color: #64717e; }
+
+    /* 技能标签 */
+    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tag {
+      padding: 6px 15px; border-radius: 20px; font-size: 13.5px;
+      background: #eef4fb; color: #2b6cb0; border: 1px solid #d6e6f5;
+    }
+    .tag.alt { background: #f3eefb; color: #6b46c1; border-color: #e3d6f5; }
+    .tag.warm { background: #fdf1ec; color: #c05621; border-color: #f6ddd1; }
+
+    /* 联系 */
+    .contact-line { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 15px; }
+    .contact-line .icon {
+      width: 34px; height: 34px; border-radius: 10px; background: #eef4fb;
+      display: flex; align-items: center; justify-content: center; font-size: 16px;
+    }
+    a { color: #2b6cb0; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer { text-align: center; color: #9aa7b4; font-size: 13px; padding-bottom: 30px; }
   </style>
 </head>
 <body>
+
+  <div class="hero">
+    <div class="avatar">👩‍💻</div>
+    <h1>林丹谊</h1>
+    <p class="sub">大数据技术专业学生 · 数据分析方向</p>
+  </div>
+
   <div class="wrap">
 
-    <header>
-      <h1>林丹谊</h1>
-      <p>大数据技术专业学生 · 数据分析方向</p>
-    </header>
-
-    <section>
+    <div class="card">
       <h2>关于我</h2>
       <p>学习成绩优异，专业排名第一，做事踏实严谨、细心负责。具备数据处理、沟通协调等实操能力，善于高效完成各项任务，愿意主动学习、快速成长。</p>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>教育背景</h2>
-      <ul>
-        <li>顺德职业技术大学 · 大数据技术（2023.09 至今）</li>
-        <li>GPA 4.46/5.0，专业排名 1/164，连续 3 次获得校级学业一等奖学金</li>
-        <li>核心课程：C 语言程序设计、数据结构、Python 基础、数据库基础、大数据基础</li>
-      </ul>
-    </section>
+      <div class="item">
+        <div class="top">
+          <h3>顺德职业技术大学 · 大数据技术</h3>
+          <span class="time">2023.09 至今</span>
+        </div>
+        <p>GPA 4.46/5.0，专业排名 1/164，连续 3 次获得校级学业一等奖学金</p>
+        <p>核心课程：C 语言程序设计、数据结构、Python 基础、数据库基础、大数据基础</p>
+      </div>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>竞赛与荣誉</h2>
-      <ul>
-        <li>第七届“泰迪杯”数据分析技能赛 · 国家二等奖</li>
-        <li>全国大学生数学建模竞赛（广东赛区）· 省级三等奖</li>
-        <li>广东省信息素养大赛 · 省级二等奖</li>
-        <li>校三好学生、优秀学生骨干</li>
-      </ul>
-    </section>
+      <div class="item">
+        <div class="top"><h3>第七届“泰迪杯”数据分析技能赛 · 国家二等奖</h3></div>
+        <p>负责数据清洗、异常值排查、特征筛选与标准化处理，参与模型调试、数据可视化及论文撰写。</p>
+      </div>
+      <div class="item">
+        <div class="top"><h3>全国大学生数学建模竞赛（广东赛区）· 省级三等奖</h3></div>
+        <p>负责问题拆解、数据挖掘与论文撰写，使用 Python 完成数据处理、特征工程与结果可视化。</p>
+      </div>
+      <div class="item">
+        <div class="top"><h3>广东省信息素养大赛 · 省级二等奖</h3></div>
+        <p>独立完成信息检索、数据整合与解题论证。</p>
+      </div>
+      <div class="item">
+        <div class="top"><h3>校三好学生、优秀学生骨干</h3></div>
+      </div>
+    </div>
 
-    <section>
+    <div class="card">
+      <h2>实践经历</h2>
+      <div class="item">
+        <div class="top">
+          <h3>广州和光教育科技有限公司 · 运营实习</h3>
+          <span class="time">2025.06 - 2025.09</span>
+        </div>
+        <p>负责抖音、小红书内容发布与日常维护，跟进意向客户并完成需求解答与报名引导；使用 Excel 整理咨询、报名数据，建立客户台账并做复盘分析。</p>
+      </div>
+      <div class="item">
+        <div class="top">
+          <h3>院团委组织部 · 负责人</h3>
+          <span class="time">2024.12 - 2025.12</span>
+        </div>
+        <p>统筹团课、志愿服务、团日活动的策划与执行，规范数据统计流程，服务团员 500 余人。</p>
+      </div>
+    </div>
+
+    <div class="card">
       <h2>技能</h2>
       <div class="tags">
         <span class="tag">Python</span>
         <span class="tag">数据处理与清洗</span>
         <span class="tag">数据可视化</span>
-        <span class="tag">MySQL 基础</span>
-        <span class="tag">Excel 数据统计</span>
-        <span class="tag">C 语言</span>
-        <span class="tag">社媒运营</span>
+        <span class="tag alt">MySQL 基础</span>
+        <span class="tag alt">Excel 数据统计</span>
+        <span class="tag warm">C 语言</span>
+        <span class="tag warm">社媒运营</span>
         <span class="tag">英语四级</span>
       </div>
-    </section>
+    </div>
 
-    <section>
+    <div class="card">
       <h2>联系方式</h2>
-      <p>📮 邮箱：3481086912@qq.com</p>
-      <p>🔗 GitHub：<a href="https://github.com/ldy850">https://github.com/ldy850</a></p>
-    </section>
+      <div class="contact-line">
+        <div class="icon">📮</div>
+        <span>3481086912@qq.com</span>
+      </div>
+      <div class="contact-line">
+        <div class="icon">🔗</div>
+        <a href="https://github.com/ldy850">github.com/ldy850</a>
+      </div>
+    </div>
 
-    <footer>© 2026 林丹谊 · Powered by GitHub Pages</footer>
   </div>
+
+  <footer>© 2026 林丹谊 · Powered by GitHub Pages</footer>
+
 </body>
 </html>
