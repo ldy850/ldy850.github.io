@@ -3,98 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>【你的名字】的个人主页</title>
+  <title>林丹谊的个人主页</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f4f6f8; color: #333; line-height: 1.7; }
-
-    /* 顶部横幅 */
-    .hero {
-      background: linear-gradient(135deg, #2c5364, #203a43, #0f2027);
-      color: #fff; text-align: center; padding: 70px 20px 90px;
-    }
-    .avatar {
-      width: 110px; height: 110px; border-radius: 50%;
-      background: #fff; color: #2c5364; font-size: 48px;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 18px; border: 4px solid rgba(255,255,255,.3);
-    }
-    .hero h1 { font-size: 30px; margin-bottom: 8px; }
-    .hero p.sub { opacity: .85; font-size: 16px; }
-
-    /* 卡片容器 */
-    .container { max-width: 720px; margin: -50px auto 60px; padding: 0 20px; }
-    .card {
-      background: #fff; border-radius: 14px; padding: 28px;
-      margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,.06);
-    }
-    .card h2 { font-size: 20px; margin-bottom: 14px; color: #2c5364; border-left: 4px solid #2c5364; padding-left: 10px; }
-
-    /* 技能标签 */
-    .tags { display: flex; flex-wrap: wrap; gap: 10px; }
-    .tag {
-      background: #eef3f7; color: #2c5364; padding: 6px 14px;
-      border-radius: 20px; font-size: 14px;
-    }
-
-    /* 项目条目 */
-    .item { margin-bottom: 14px; }
-    .item h3 { font-size: 16px; }
-    .item p { color: #666; font-size: 14px; }
-
-    .contact a { color: #2c5364; text-decoration: none; }
-    .footer { text-align: center; color: #999; font-size: 13px; padding-bottom: 30px; }
+    body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f6f7; color: #333; line-height: 1.8; }
+    .wrap { max-width: 680px; margin: 50px auto; padding: 0 20px; }
+    header { text-align: center; margin-bottom: 36px; }
+    header h1 { font-size: 28px; margin-bottom: 6px; }
+    header p { color: #888; font-size: 15px; }
+    section { background: #fff; border-radius: 12px; padding: 24px 26px; margin-bottom: 18px; }
+    h2 { font-size: 17px; color: #2c5364; margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #2c5364; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; font-size: 15px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { background: #eef3f7; color: #2c5364; padding: 5px 13px; border-radius: 18px; font-size: 14px; }
+    .muted { color: #888; font-size: 14px; }
+    a { color: #2c5364; text-decoration: none; }
+    footer { text-align: center; color: #aaa; font-size: 13px; margin-top: 30px; }
   </style>
 </head>
 <body>
+  <div class="wrap">
 
-  <div class="hero">
-    <div class="avatar">👨‍💻</div>
-    <h1>【你的名字】</h1>
-    <p class="sub">软件工程专业学生 · 正在学习 Web 开发</p>
-  </div>
+    <header>
+      <h1>林丹谊</h1>
+      <p>大数据技术专业学生 · 数据分析方向</p>
+    </header>
 
-  <div class="container">
-
-    <div class="card">
+    <section>
       <h2>关于我</h2>
-      <p>【用一两句话介绍自己，例如：我是惠州学院软件工程专业学生，喜欢写代码，正在学习前端与全栈开发，希望以后从事软件开发相关工作。】</p>
-    </div>
+      <p>学习成绩优异，专业排名第一，做事踏实严谨、细心负责。具备数据处理、沟通协调等实操能力，善于高效完成各项任务，愿意主动学习、快速成长。</p>
+    </section>
 
-    <div class="card">
+    <section>
+      <h2>教育背景</h2>
+      <ul>
+        <li>顺德职业技术大学 · 大数据技术（2023.09 至今）</li>
+        <li>GPA 4.46/5.0，专业排名 1/164，连续 3 次获得校级学业一等奖学金</li>
+        <li>核心课程：C 语言程序设计、数据结构、Python 基础、数据库基础、大数据基础</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>竞赛与荣誉</h2>
+      <ul>
+        <li>第七届“泰迪杯”数据分析技能赛 · 国家二等奖</li>
+        <li>全国大学生数学建模竞赛（广东赛区）· 省级三等奖</li>
+        <li>广东省信息素养大赛 · 省级二等奖</li>
+        <li>校三好学生、优秀学生骨干</li>
+      </ul>
+    </section>
+
+    <section>
       <h2>技能</h2>
       <div class="tags">
         <span class="tag">Python</span>
+        <span class="tag">数据处理与清洗</span>
+        <span class="tag">数据可视化</span>
+        <span class="tag">MySQL 基础</span>
+        <span class="tag">Excel 数据统计</span>
         <span class="tag">C 语言</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">Vue</span>
-        <span class="tag">Element Plus</span>
-        <span class="tag">Git</span>
-        <span class="tag">【可自行增删】</span>
+        <span class="tag">社媒运营</span>
+        <span class="tag">英语四级</span>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>项目与经历</h2>
-      <div class="item">
-        <h3>【项目名称，例如：个人博客 / 毕业设计】</h3>
-        <p>【简单说明这个项目做了什么、用了什么技术，没有就先删掉本块】</p>
-      </div>
-      <div class="item">
-        <h3>【获奖 / 证书，例如：数学建模竞赛、HCIP】</h3>
-        <p>【一句话说明，没有就删掉】</p>
-      </div>
-    </div>
-
-    <div class="card contact">
+    <section>
       <h2>联系方式</h2>
-      <p>📮 邮箱：【your@email.com】</p>
+      <p>📮 邮箱：3481086912@qq.com</p>
       <p>🔗 GitHub：<a href="https://github.com/ldy850">https://github.com/ldy850</a></p>
-    </div>
+    </section>
 
+    <footer>© 2026 林丹谊 · Powered by GitHub Pages</footer>
   </div>
-
-  <p class="footer">© 2026 【你的名字】 · Powered by GitHub Pages</p>
-
 </body>
 </html>
